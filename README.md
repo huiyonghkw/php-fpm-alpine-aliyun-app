@@ -5,3 +5,28 @@ The image based on [bravist/php-cli-alpine-aliyun-app](https://hub.docker.com/r/
 此镜像基于[bravist/php-cli-alpine-aliyun-app](https://hub.docker.com/r/bravist/php-cli-alpine-aliyun-app/)，安装PHP FPM模式，主要配合Nginx服务器实现PHP语言的网站运行。
 
 
+
+## Upgrade
+
+`2017-11-06` Support [Zeromq](https://pkgs.alpinelinux.org/package/edge/main/x86/zeromq), The ZeroMQ messaging library and tools.
+
+
+## Build & Push
+
+1. Docker build image
+```bash
+❯ docker build -t bravist/php-fpm-alpine-aliyun-app:1.9 .
+```
+
+2. Login [Docker Hub](https://hub.docker.com)
+```bash
+❯ docker login
+Username (bravist):
+Password:
+Login Succeeded
+```
+
+3. Push image to [Docker Hub](https://hub.docker.com)
+```bash
+❯ docker push bravist/php-fpm-alpine-aliyun-app:1.9
+```
