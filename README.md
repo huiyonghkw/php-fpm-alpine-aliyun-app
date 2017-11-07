@@ -8,7 +8,7 @@ The image based on [bravist/php-cli-alpine-aliyun-app](https://hub.docker.com/r/
 
 ## Upgrade
 
-`2017-11-06` Support [Zeromq](https://pkgs.alpinelinux.org/package/edge/main/x86/zeromq), The ZeroMQ messaging library and tools.
+`2017-11-06` Support [PHP7 extension for ZeroMQ](https://pkgs.alpinelinux.org/package/edge/community/x86/php7-zmq), The ZeroMQ messaging library and tools.
 
 
 ## Build & Push
