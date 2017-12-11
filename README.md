@@ -8,6 +8,8 @@ The image based on [bravist/php-cli-alpine-aliyun-app](https://hub.docker.com/r/
 
 ## Upgrade
 
+`2017-12-11` [413 request entity too large](https://www.iteblog.com/archives/1421.html)
+
 `2017-11-06` Support [PHP7 extension for ZeroMQ](https://pkgs.alpinelinux.org/package/edge/community/x86/php7-zmq), The ZeroMQ messaging library and tools.
 
 
@@ -15,7 +17,7 @@ The image based on [bravist/php-cli-alpine-aliyun-app](https://hub.docker.com/r/
 
 1. Docker build image
 ```bash
-❯ docker build -t bravist/php-fpm-alpine-aliyun-app:1.11 .
+❯ docker build -t bravist/php-fpm-alpine-aliyun-app:1.12 .
 ```
 
 2. Login [Docker Hub](https://hub.docker.com)
@@ -28,5 +30,5 @@ Login Succeeded
 
 3. Push image to [Docker Hub](https://hub.docker.com)
 ```bash
-❯ docker push bravist/php-fpm-alpine-aliyun-app:1.11
+❯ docker push bravist/php-fpm-alpine-aliyun-app:1.12
 ```
