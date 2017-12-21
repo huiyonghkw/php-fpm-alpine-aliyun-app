@@ -28,6 +28,7 @@ RUN apk update \
 	    php7-fpm@community \
 	&& cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime \
 	&& echo "${TIMEZONE}" > /etc/timezone \
+	&& apk del tzdata && \
  	&& rm -rf /var/cache/apk/*
 
 # Set environments
@@ -39,13 +40,15 @@ RUN sed -i "s|;*daemonize\s*=\s*yes|daemonize = no|g" /etc/php7/php-fpm.conf && 
 	sed -i "s|;*upload_max_filesize =.*|upload_max_filesize = ${MAX_UPLOAD}|i" /etc/php7/php.ini && \
 	sed -i "s|;*max_file_uploads =.*|max_file_uploads = ${PHP_MAX_FILE_UPLOAD}|i" /etc/php7/php.ini && \
 	sed -i "s|;*post_max_size =.*|post_max_size = ${PHP_MAX_POST}|i" /etc/php7/php.ini && \
-	sed -i "s|;*cgi.fix_pathinfo=.*|cgi.fix_pathinfo= 0|i" /etc/php7/php.ini
+	sed -i "s|;*cgi.fix_pathinfo=.*|cgi.fix_pathinfo= 0|i" /etc/php7/php.ini && \
+	sed -i "s|;*request_terminate_timeout\s*=\s*0|request_terminate_timeout = 0|i" /etc/php7/php-fpm.d/www.conf
 
 RUN mkdir -p /usr/share/nginx/html
 
-WORKDIR /usr/share/nginx/html
+# Expose volumes
+VOLUME ["/usr/share/nginx/html"]
 
-VOLUME /usr/share/nginx/html
+WORKDIR /usr/share/nginx/html
 
 EXPOSE 9000
 
