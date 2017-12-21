@@ -8,6 +8,8 @@ The image based on [bravist/php-cli-alpine-aliyun-app](https://hub.docker.com/r/
 
 ## Upgrade
 
+`2017-12-21` 新增php.ini推荐配置
+
 `2017-12-11` [413 request entity too large](https://www.iteblog.com/archives/1421.html)
 
 `2017-11-06` Support [PHP7 extension for ZeroMQ](https://pkgs.alpinelinux.org/package/edge/community/x86/php7-zmq), The ZeroMQ messaging library and tools.
