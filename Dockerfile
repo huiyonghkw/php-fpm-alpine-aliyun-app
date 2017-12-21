@@ -1,6 +1,6 @@
 # https://github.com/jorge07/alpine-php
 
-FROM bravist/php-cli-alpine-aliyun-app:1.10
+FROM bravist/php-cli-alpine-aliyun-app:1.11
 
 MAINTAINER bravist <chenghuiyong1987@gmail.com>
 
@@ -28,7 +28,7 @@ RUN apk update \
 	    php7-fpm@community \
 	&& cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime \
 	&& echo "${TIMEZONE}" > /etc/timezone \
-	&& apk del tzdata && \
+	&& apk del tzdata \
  	&& rm -rf /var/cache/apk/*
 
 # Set environments

@@ -19,7 +19,7 @@ The image based on [bravist/php-cli-alpine-aliyun-app](https://hub.docker.com/r/
 
 1. Docker build image
 ```bash
-❯ docker build -t bravist/php-fpm-alpine-aliyun-app:1.12 .
+❯ docker build -t bravist/php-fpm-alpine-aliyun-app:1.13 .
 ```
 
 2. Login [Docker Hub](https://hub.docker.com)
@@ -32,5 +32,5 @@ Login Succeeded
 
 3. Push image to [Docker Hub](https://hub.docker.com)
 ```bash
-❯ docker push bravist/php-fpm-alpine-aliyun-app:1.12
+❯ docker push bravist/php-fpm-alpine-aliyun-app:1.13
 ```
