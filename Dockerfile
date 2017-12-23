@@ -25,13 +25,15 @@ RUN apk update \
  	&& rm -rf /var/cache/apk/*
 
 RUN mkdir -p /usr/share/nginx/html
+RUN mkdir -p /usr/local/var/log/php7
+RUN mkdir -p /usr/local/var/run
 
 COPY ./php-fpm.conf /etc/php7/
 
 COPY ./www.conf /etc/php7/php-fpm.d/
 
 # Expose volumes
-VOLUME ["/usr//nginx/html", "/usr/local/var/log"]
+VOLUME ["/usr/share/nginx/html", "/usr/local/var/log/php7"]
 
 WORKDIR /usr/share/nginx/html
 
