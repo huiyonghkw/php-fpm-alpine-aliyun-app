@@ -11,7 +11,10 @@ RUN echo 'http://mirrors.aliyun.com/alpine/latest-stable/main' > /etc/apk/reposi
 	&& echo '@community http://mirrors.aliyun.com/alpine/latest-stable/community' >> /etc/apk/repositories \
 	&& echo '@testing http://mirrors.aliyun.com/alpine/edge/testing' >> /etc/apk/repositories
 
-
+# ensure www-data user exists
+RUN set -x \
+	&& addgroup -g 82 -S www-data \
+	&& adduser -u 82 -D -S -G www-data www-data
 
 # Mirror mirror switch to Alpine Linux - http://dl-4.alpinelinux.org/alpine/
 RUN apk update \
