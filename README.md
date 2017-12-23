@@ -8,6 +8,11 @@ The image based on [bravist/php-cli-alpine-aliyun-app](https://hub.docker.com/r/
 
 ## Upgrade
 
+`2017-12-23` 
+1. [PHP-FPM进程调优: 动态适合小内存机器，灵活分配进程，省内存。静态适用于大内存机器，动态创建回收进程对服务器资源也是一种消耗](https://www.zybuluo.com/phper/note/89081) 
+2. [（总结）Nginx使用的php-fpm的两种进程管理方式及优化](http://www.ha97.com/4339.html)
+
+
 `2017-12-21` 新增php.ini推荐配置
 
 `2017-12-11` [413 request entity too large](https://www.iteblog.com/archives/1421.html)
@@ -19,7 +24,7 @@ The image based on [bravist/php-cli-alpine-aliyun-app](https://hub.docker.com/r/
 
 1. Docker build image
 ```bash
-❯ docker build -t bravist/php-fpm-alpine-aliyun-app:1.13 .
+❯ docker build -t bravist/php-fpm-alpine-aliyun-app:1.14 .
 ```
 
 2. Login [Docker Hub](https://hub.docker.com)
@@ -32,5 +37,5 @@ Login Succeeded
 
 3. Push image to [Docker Hub](https://hub.docker.com)
 ```bash
-❯ docker push bravist/php-fpm-alpine-aliyun-app:1.13
+❯ docker push bravist/php-fpm-alpine-aliyun-app:1.14
 ```
