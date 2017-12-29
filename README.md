@@ -7,6 +7,7 @@ The image based on [bravist/php-cli-alpine-aliyun-app](https://hub.docker.com/r/
 
 
 ## Upgrade
+`2017-12-29` [FastCGI use to listen on a unix socket](https://blog.linuxeye.cn/364.html)
 
 `2017-12-23` 
 1. [PHP-FPM进程调优: 动态适合小内存机器，灵活分配进程，省内存。静态适用于大内存机器，动态创建回收进程对服务器资源也是一种消耗](https://www.zybuluo.com/phper/note/89081) 
