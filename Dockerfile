@@ -36,7 +36,7 @@ COPY ./php-fpm.conf /etc/php7/
 COPY ./www.conf /etc/php7/php-fpm.d/
 
 # Expose volumes
-VOLUME ["/usr/share/nginx/html", "/usr/local/var/log/php7"]
+VOLUME ["/usr/share/nginx/html", "/usr/local/var/log/php7", "/var/run/"]
 
 WORKDIR /usr/share/nginx/html
 
