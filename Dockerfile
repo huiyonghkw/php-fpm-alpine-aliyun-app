@@ -1,15 +1,15 @@
 # https://github.com/jorge07/alpine-php
 
-FROM bravist/php-cli-alpine-aliyun-app:1.12
+FROM bravist/php-cli-alpine-aliyun-app:1.13
 
 MAINTAINER bravist <chenghuiyong1987@gmail.com>
 
 # https://pkgs.alpinelinux.org/packages
 
 # Mirror mirror switch to Ali-OSM (Alibaba Open Source Mirror Site) - http://mirrors.aliyun.com/
-RUN echo 'http://mirrors.aliyun.com/alpine/latest-stable/main' > /etc/apk/repositories \
-	&& echo '@community http://mirrors.aliyun.com/alpine/latest-stable/community' >> /etc/apk/repositories \
-	&& echo '@testing http://mirrors.aliyun.com/alpine/edge/testing' >> /etc/apk/repositories
+RUN echo 'https://mirrors.aliyun.com/alpine/latest-stable/main' > /etc/apk/repositories \
+	&& echo '@community https://mirrors.aliyun.com/alpine/latest-stable/community' >> /etc/apk/repositories \
+	&& echo '@testing https://mirrors.aliyun.com/alpine/edge/testing' >> /etc/apk/repositories
 
 # ensure www-data user exists
 RUN set -x \

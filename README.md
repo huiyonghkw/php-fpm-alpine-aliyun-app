@@ -7,6 +7,9 @@ The image based on [bravist/php-cli-alpine-aliyun-app](https://hub.docker.com/r/
 
 
 ## Upgrade
+
+`2019-08-04` 阿里云镜像切换HTTPS
+
 `2017-12-29` [FastCGI use to listen on a unix socket](https://blog.linuxeye.cn/364.html)
 
 `2017-12-23` 
@@ -25,7 +28,7 @@ The image based on [bravist/php-cli-alpine-aliyun-app](https://hub.docker.com/r/
 
 1. Docker build image
 ```bash
-❯ docker build -t bravist/php-fpm-alpine-aliyun-app:1.15 .
+❯ docker build -t bravist/php-fpm-alpine-aliyun-app:1.17 .
 ```
 
 2. Login [Docker Hub](https://hub.docker.com)
@@ -38,5 +41,5 @@ Login Succeeded
 
 3. Push image to [Docker Hub](https://hub.docker.com)
 ```bash
-❯ docker push bravist/php-fpm-alpine-aliyun-app:1.15
+❯ docker push bravist/php-fpm-alpine-aliyun-app:1.17
 ```
